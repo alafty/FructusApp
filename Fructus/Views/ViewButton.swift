@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct ViewButton: View {
+    @AppStorage("isOnboarding") var isOnBoarding: Bool?
     var body: some View {
             Button {
-                print("Clicked")
+               isOnBoarding = false
             } label: {
                 HStack {
                     Text("View More")

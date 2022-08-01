@@ -10,17 +10,18 @@ import SwiftUI
 struct FruitCard: View {
     
     @State var isAnimating: Bool = false
+    var fruit: Fruit
     
     var body: some View {
         VStack {
-            Image("blueberry")
+            Image(fruit.image)
                 .resizable()
                 .scaledToFit()
                 .shadow(color: .black.opacity(0.2), radius: 5, x: 2, y: 4)
                 .opacity(isAnimating ? 1 : 0)
                 .offset(y: isAnimating ? 0 : -40)
             
-            Text("Blueberries")
+            Text(fruit.title)
                 .font(.system(size: 32))
                 .foregroundColor(.white)
                 .fontWeight(.semibold)
@@ -28,7 +29,7 @@ struct FruitCard: View {
                 .padding(.bottom, 5)
                 .scaleEffect(isAnimating ? 1 : 0.7)
             
-            Text("Blueberries are a very beneficial and popular all around the world")
+            Text(fruit.headline)
                 .font(.system(size: 16))
                 .foregroundColor(.white)
                 .fontWeight(.light)
@@ -43,7 +44,7 @@ struct FruitCard: View {
 
         }
         .frame(minWidth: 0, maxWidth: 360, minHeight: 0, maxHeight: 740, alignment: .center)
-        .background(.linearGradient(Gradient(colors: [Color("ColorBerryDark"), Color("ColorBerryLight")]), startPoint: .top, endPoint: .bottom))
+        .background(.linearGradient(Gradient(colors: [fruit.gradientColors[0], fruit.gradientColors[1]]), startPoint: .top, endPoint: .bottom))
         .cornerRadius(30)
         .onAppear {
             withAnimation(.easeOut(duration: 0.5)){
@@ -55,7 +56,7 @@ struct FruitCard: View {
 
 struct FruitCard_Previews: PreviewProvider {
     static var previews: some View {
-        FruitCard()
+        FruitCard(fruit: FruitData[1])
             .preferredColorScheme(.dark)
             .previewLayout(.fixed(width: 320, height: 640))
     }
