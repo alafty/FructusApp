@@ -20,6 +20,7 @@
 		E29396F62898139D0034AF52 /* FruitDetialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29396F52898139D0034AF52 /* FruitDetialView.swift */; };
 		E29396F828981B260034AF52 /* FruitHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29396F728981B260034AF52 /* FruitHeader.swift */; };
 		E29396FA28981F5C0034AF52 /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29396F928981F5C0034AF52 /* LinkView.swift */; };
+		E2F5F6DB2899F11A00600FBB /* NutritionDisclosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F5F6DA2899F11A00600FBB /* NutritionDisclosure.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		E29396F52898139D0034AF52 /* FruitDetialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitDetialView.swift; sourceTree = "<group>"; };
 		E29396F728981B260034AF52 /* FruitHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitHeader.swift; sourceTree = "<group>"; };
 		E29396F928981F5C0034AF52 /* LinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
+		E2F5F6DA2899F11A00600FBB /* NutritionDisclosure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionDisclosure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				E27F9B5A2893349D006AF0AD /* OnBoardingView.swift */,
 				E29396F1289809220034AF52 /* ContentView.swift */,
 				E29396F52898139D0034AF52 /* FruitDetialView.swift */,
+				E2F5F6DA2899F11A00600FBB /* NutritionDisclosure.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				E29396FA28981F5C0034AF52 /* LinkView.swift in Sources */,
 				E27F9B69289339F1006AF0AD /* FruitCard.swift in Sources */,
 				E29396F2289809220034AF52 /* ContentView.swift in Sources */,
+				E2F5F6DB2899F11A00600FBB /* NutritionDisclosure.swift in Sources */,
 				E29396F0289346630034AF52 /* FruitData.swift in Sources */,
 				E29396F428980EE70034AF52 /* ListItem.swift in Sources */,
 				E29396ED289345EA0034AF52 /* FruitModel.swift in Sources */,
