@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @AppStorage("isOnboarding") var isOnBoarding: Bool = false
+    @State var presentationMode:Bool = false
     
     var body: some View {
             NavigationView{
@@ -29,7 +30,18 @@ struct ContentView: View {
                     }
                 }
                 .navigationTitle("Fructus")
+                .toolbar {
+                    Button {
+                        presentationMode = true
+                    } label: {
+                        Image(systemName: "slider.horizontal.3")
+                    }
+                } //: Toolbar
+                .sheet(isPresented: $presentationMode) {
+                    SettingsView()
+                }
             }
+            .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

@@ -18,6 +18,7 @@ struct FruitCard: View {
                 .resizable()
                 .scaledToFit()
                 .shadow(color: .black.opacity(0.2), radius: 5, x: 2, y: 4)
+                .frame(minWidth: 100, idealWidth: 100, maxWidth: 300, minHeight: 100, idealHeight: 100, maxHeight: 300, alignment: .center)
                 .opacity(isAnimating ? 1 : 0)
                 .offset(y: isAnimating ? 0 : -40)
             
@@ -43,9 +44,11 @@ struct FruitCard: View {
             .offset(y: isAnimating ? 0 : 40)
 
         }
-        .frame(minWidth: 0, maxWidth: 360, minHeight: 0, maxHeight: 740, alignment: .center)
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 740, alignment: .center)
         .background(.linearGradient(Gradient(colors: [fruit.gradientColors[0], fruit.gradientColors[1]]), startPoint: .top, endPoint: .bottom))
         .cornerRadius(30)
+        .padding(.vertical, 20)
+        .padding(.horizontal, 10)
         .onAppear {
             withAnimation(.easeOut(duration: 0.5)){
                 isAnimating = true
