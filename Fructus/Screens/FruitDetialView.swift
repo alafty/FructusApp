@@ -51,6 +51,7 @@ struct FruitDetialView: View {
             .navigationBarHidden(true)
             .edgesIgnoringSafeArea(.top)
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

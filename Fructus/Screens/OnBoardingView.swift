@@ -10,7 +10,7 @@ import SwiftUI
 struct OnBoardingView: View {
     var body: some View {
         TabView {
-            ForEach(FruitData){ item in
+            ForEach(FruitData.shuffled()){ item in
                 FruitCard(fruit: item)
             }
         }
